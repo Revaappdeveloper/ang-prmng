@@ -1,0 +1,17 @@
+<div class="ui-g-12 ui-md-4">
+    <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><p-checkbox></p-checkbox></span>
+        <input type="text" pInputText placeholder="Name">
+        <span class="ui-inputgroup-addon"><p-radioButton></p-radioButton></span>
+    </div>
+</div>
+<p-dropdown [options]="cars" [(ngModel)]="selectedCar" editable="true" placeholder="Select a Brand"></p-dropdown>
+<p>Selected Car: {{selectedCar || 'none'}}</p>
+<div>
+    <p-dropdown [options]="cities" [(ngModel)]="selectedCity" [virtualScroll]="true" itemSize="30" [filter]="true" filterBy="label,value.name"></p-dropdown>
+    <p>Selected City: {{selectedCity ? selectedCity.name : 'none'}}</p>
+    <span>
+    <p-dropdown [options]="items" [(ngModel)]="item" placeholder="Select Item" [virtualScroll]="true" [itemSize]="31" [filter]="false"></p-dropdown>
+
+</span>
+</div>
